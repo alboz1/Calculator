@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500");
+body {
+  height: 100vh;
+  background-image: linear-gradient(135deg, #F97794 0%, #623AA2 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Fira Sans', sans-serif; }
+
+.calculator {
+  width: 400px;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  font-size: 25px;
+  color: #3a3a3a;
+  background: rgba(255, 255, 255, 0.3); }
+  .calculator .screen {
+    height: 28px;
+    background: white;
+    padding: 1.1em .7em;
+    text-align: right;
+    font-size: 30px; }
+  .calculator .wrapper .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .calculator .wrapper .row .btn {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      height: 80px;
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-right-color: transparent;
+      border-top-color: transparent;
+      outline: none;
+      -webkit-transition: background 0.1s ease-in-out;
+      transition: background 0.1s ease-in-out; }
+      .calculator .wrapper .row .btn:active:not([data-math]) {
+        background: #9c7bc4; }
+      .calculator .wrapper .row .btn[data-math] {
+        color: #cd4726; }
+        .calculator .wrapper .row .btn[data-math].active {
+          background: #cd4726;
+          color: white; }
+      .calculator .wrapper .row .btn#equal {
+        -ms-flex-preferred-size: 53.5%;
+            flex-basis: 53.5%; }
+      .calculator .wrapper .row .btn[data-val="-"] {
+        color: #cd4726; }

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500')
+
+$primary: #9c7bc4
+$secondary: #db5b3b
+body
+    height: 100vh
+    background-image: linear-gradient( 135deg, #F97794 0%, #623AA2 100%)
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: 'Fira Sans', sans-serif
+
+.calculator
+    width: 400px
+    box-shadow: 0 3px 10px rgba(0,0,0,.3)
+    font-size: 25px
+    color: #3a3a3a
+    background: rgba(white, .3)
+    .screen
+        height: 28px
+        background: white
+        padding: 1.1em .7em
+        text-align: right
+        font-size: 30px
+    .wrapper .row
+        display: flex
+        .btn
+            flex: 1
+            height: 80px
+            background: none
+            border: 1px solid rgba(white, .3)
+            border-right-color: transparent
+            border-top-color: transparent
+            outline: none
+            transition: background 0.1s ease-in-out
+            &:active:not([data-math])
+                background: $primary
+            &[data-math]
+                color: darken($secondary, 7%)
+                &.active
+                    background: darken($secondary, 7%)
+                    color: white
+            &#equal
+                flex-basis: 53.5%
+            &[data-val="-"]
+                color: darken($secondary, 7%)
+            
