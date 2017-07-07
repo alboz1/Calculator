@@ -22,9 +22,7 @@ const calculator = (function() {
         [...mathOperations].forEach(btn => btn.addEventListener('click', function() {
             firstNum = screen.textContent === ' ' ? firstNum : screen.textContent;
 
-            if (!this.classList.contains('active')) {
-                [...mathOperations].forEach(btn => btn.classList.remove('active'));
-            }
+            [...mathOperations].forEach(btn => btn.classList.remove('active'));
 
             this.classList.add('active');
             screen.textContent = '';
